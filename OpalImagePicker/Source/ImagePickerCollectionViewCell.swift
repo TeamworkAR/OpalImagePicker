@@ -161,7 +161,8 @@ class ImagePickerCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         imageView.image = nil
-        
+        self.overlayView = nil
+        self.overlayImageView = nil
         timeLabel.isHidden = true
         timeOverlay.isHidden = true
         
