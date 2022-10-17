@@ -385,6 +385,9 @@ open class OpalImagePickerRootViewController: UIViewController {
 // MARK: - Collection View Delegate
 
 extension OpalImagePickerRootViewController: UICollectionViewDelegate {
+    public func collectionView(_ collectionView: UICollectionView, didBeginMultipleSelectionInteractionAt indexPath: IndexPath) {
+        
+    }
     
     /// Collection View did select item at `IndexPath`
     ///
@@ -431,6 +434,9 @@ extension OpalImagePickerRootViewController: UICollectionViewDelegate {
 // MARK: - Collection View Data Source
 
 extension OpalImagePickerRootViewController: UICollectionViewDataSource {
+    public func collectionView(_ collectionView: UICollectionView, shouldBeginMultipleSelectionInteractionAt indexPath: IndexPath) -> Bool {
+        return true
+    }
     
     /// Returns Collection View Cell for item at `IndexPath`
     ///
